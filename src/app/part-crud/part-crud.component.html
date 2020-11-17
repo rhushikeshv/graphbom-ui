@@ -1,0 +1,67 @@
+<p-panel header="Part Management">
+<p-table [value]="parts">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Level</th>
+      <th>Quantity</th>
+      <th>Action</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData>
+    <tr>
+      <td pEditableColumn>
+        <p-cellEditor>
+          <ng-template pTemplate="input">
+            <input pInputText type="text" [(ngModel)]="rowData.name">
+          </ng-template>
+          <ng-template pTemplate="output">
+            {{rowData.name}}
+          </ng-template>
+        </p-cellEditor>
+      </td>
+      <td pEditableColumn>
+        <p-cellEditor>
+          <ng-template pTemplate="input">
+            <input pInputText type="text" [(ngModel)]="rowData.description" required>
+          </ng-template>
+          <ng-template pTemplate="output">
+            {{rowData.description}}
+          </ng-template>
+        </p-cellEditor>
+      </td>
+      <td pEditableColumn>
+        <p-cellEditor>
+          <ng-template pTemplate="input">
+            <input pInputText type="text" [(ngModel)]="rowData.level">
+          </ng-template>
+          <ng-template pTemplate="output">
+            {{rowData.level}}
+          </ng-template>
+        </p-cellEditor>
+      </td>
+      <td pEditableColumn>
+        <p-cellEditor>
+          <ng-template pTemplate="input">
+            <input pInputText type="text" [(ngModel)]="rowData.quantity">
+          </ng-template>
+          <ng-template pTemplate="output">
+            {{rowData.quantity}}
+          </ng-template>
+        </p-cellEditor>
+      </td>
+      <td>
+        <p-cellEditor>
+          <ng-template pTemplate="input">
+          </ng-template>
+          <ng-template pTemplate="output">
+            <i class="fa fa-plus-circle fa-2x" (click)="onAddPart()"> </i>
+            <i class="fa fa-save fa-2x" (click)="onSave(rowData)"> </i>
+          </ng-template>
+        </p-cellEditor>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+</p-panel>
