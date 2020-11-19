@@ -5,6 +5,6 @@ Dockerization of the front end application ( A new architecture)
 docker build . -t graphbom/ui
 
 #Docker run image
-docker run -it --rm -p4200:4200 graphbom/ui
+docker run -it --rm -p80:80 graphbom/ui
 
 ![Alt text](/front-end.png)
