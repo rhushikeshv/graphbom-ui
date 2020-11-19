@@ -2,7 +2,7 @@
   <configuration default="false" name="graphbom-ui" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
     <deployment type="dockerfile">
       <settings>
-        <option name="imageTag" value="graphhbom/ui" />
+        <option name="imageTag" value="graphbom/ui" />
         <option name="buildCliOptions" value="" />
         <option name="command" value="" />
         <option name="containerName" value="graphbom-ui" />
