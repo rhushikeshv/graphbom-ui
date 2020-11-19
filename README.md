@@ -7,4 +7,4 @@ docker build . -t graphbom/ui
 #Docker run image
 docker run -it --rm -p80:80 graphbom/ui
 
-![Alt text](/front-end.png)
+![Alt text](/frontend-ui.png)
